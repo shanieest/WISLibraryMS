@@ -1,8 +1,6 @@
-import { useState } from "react";
 import SearchBar from "./SearchBar";
 
 export default function Header(){
-    const [isOpen, setIsOpen] = useState(false);
  
     return(
         <header className="shadow-md">
