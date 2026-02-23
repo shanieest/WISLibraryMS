@@ -21,7 +21,6 @@ export default function SearchBar() {
   return (
     <div className="flex flex-col items-start space-y-3">
       
-      {/* Search Controls */}
       <div className="flex items-center space-x-2">
         <select
           value={category}
