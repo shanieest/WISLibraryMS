@@ -4,12 +4,12 @@ export default function SectionWis() {
             <img src="src\assets\Westfields Badge.png" 
                 alt="Logo" className=" h-32 mr-8" />
             <h1 className="text-2xl font-bold mb-4 text-white text-left pl-16">Westfields <br/>
-                <span>
+                <span className="flex flex-row">
                     International School
                 </span>
             </h1>
 
-            <h1 className="text-4xl flex flex-row font-bold mb-4 text-white text-left px-16">
+            <h1 className="text-4xl font-bold mb-4 text-white text-left">
                 LIBRARY
             </h1>
 

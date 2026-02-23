@@ -25,7 +25,7 @@ export default function SearchBar() {
             onChange={(e) => setQuery(e.target.value)}
             className="border rounded px-1 border-[#ff7c08] py-1"
         />
-        <button onClick={() => setResults(true)} className="bg-blue-500 text-white px-4 py-1 rounded">
+        <button onClick={() => setResults(true)} className="bg-[#ff7c08] text-white px-4 py-1 rounded">
             Search
         </button>
     </div>
