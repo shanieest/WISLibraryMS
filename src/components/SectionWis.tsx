@@ -9,16 +9,16 @@ export default function SectionWis() {
           <img
             src={logo}
             alt="Westfields Logo"
-            className="h-20 w-auto"
+            className="h-50 w-auto"
           />
           
-          <h1 className="text-2xl font-bold leading-tight">
-            Westfields <br />
-            International School
+          <h1 className="text-3xl font-bold leading-tight font-serif">
+            WESTFIELDS <br />
+            INTERNATIONAL SCHOOL
           </h1>
         </div>
 
-        <h2 className="text-4xl font-extrabold tracking-wide">
+        <h2 className="text-7xl font-extrabold tracking-wide font-serif text-yellow-400">
           LIBRARY
         </h2>
 

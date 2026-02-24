@@ -14,6 +14,11 @@ type Books = {
             id: 2,
             title: "The Silent Garden",
             author: "Elena Marchetti"
+        },
+        {
+            id:3,
+            title: "Harry Potter and the Sorcerer's Stone",
+            author: "J.K. Rowling"
         }
     ]
 

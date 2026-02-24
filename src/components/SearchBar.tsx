@@ -3,9 +3,9 @@ import { useState } from "react";
 export default function SearchBar() {
   const [category, setCategory] = useState("Author");
   const [query, setQuery] = useState("");
-  const [results, setResults] = useState([]);
+  const [results, setResults] = useState<string[]>([]);
 
-  const data = {
+  const data: Record<string, string[]> = {
     Author: ["J.K. Rowling", "George R.R. Martin", "J.R.R. Tolkien"],
     Title: ["Harry Potter", "Game of Thrones", "The Lord of the Rings"],
     Subject: ["Mathematics", "Science", "Algorithms"],
