@@ -69,7 +69,7 @@ export default function AdminLoginPage() {
                 </div>
                 <img src={logo} alt="Westfields Logo" className="h-50 w-auto mb-6" />
                 <h1 className="text-2xl font-bold font-serif text-[#463b66] text-justify">
-                    Westfields International
+                    Westfields International <br />
                     School Library
                 </h1>
             </div>
