@@ -14,8 +14,8 @@ export default function AdminLoginPage() {
             setError("Please enter a valid email address.");
             return false;
         }
-        if (password.length < 6) {
-            setError("Password must be at least 6 characters long.");
+        if (password.length < 8) {
+            setError("Password must be at least 8 characters long.");
             return false;
         }
         setError("");
@@ -33,8 +33,8 @@ export default function AdminLoginPage() {
     };
 
     return (
-        <div className="bg-[#463b66] min-h-screen flex items-center justify-center p-10 rounded shadow-md radius-lg">
-            <div className="flex items-center justify-center bg-gray-100 ">
+        <div className="bg-[#463b66] min-h-screen flex items-center justify-center p-10 rounded shadow-md radius-lg col-span-12">
+            <div className="flex items-center justify-center bg-white rounded shadow-md ">
                 <div className="bg-white p-8 rounded shadow-md w-full max-w-md">
                     <h2 className="text-2xl font-bold mb-6 text-center">Log in</h2>
                     {error && <div className="text-red-500 text-sm mb-4">{error}</div>}
@@ -68,8 +68,8 @@ export default function AdminLoginPage() {
                     </form>
                 </div>
                 <img src={logo} alt="Westfields Logo" className="h-50 w-auto mb-6" />
-                <h1 className="text-3xl font-bold font-serif text-[#463b66] tracking-wide">
-                    Westfields International <br />
+                <h1 className="text-2xl font-bold font-serif text-[#463b66] text-justify">
+                    Westfields International
                     School Library
                 </h1>
             </div>
