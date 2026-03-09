@@ -1,9 +1,16 @@
 import { useState } from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
+import { useNavigate } from "react-router";
 
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(true);
     const [booksOpen, setBooksOpen] = useState(false);
+    const navigate = useNavigate();
+
+    const handleNavigation = (path: string) => {
+        navigate("/books/details");
+    };
+
 
     return (
         <aside className={`bg-[#463b66] text-white p-6 transition-all duration-300 min-h-screen ${isOpen ? "w-64" : "w-20"}`}>
