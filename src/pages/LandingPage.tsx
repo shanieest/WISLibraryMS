@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import SectionBanner from "../components/SectionBanner";
 import SectionBooks from "../components/SectionBooks";
@@ -12,6 +13,7 @@ export default function LandingPage() {
     <SectionWis />
     <SectionBooks />
     <SectionBanner />
+    <Footer />
     </>
    </div>
 
