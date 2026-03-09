@@ -13,11 +13,12 @@ export default function Sidebar() {
             
             <nav>
                 <ul>
-                    {['Dashboard', 'Books', 'Members'].map((item) => (
+                    {['Dashboard', 'Books'].map((item) => (
                         <li key={item} className="mb-2">
                             <a href={`/${item}`} className="block py-2 px-4 rounded hover:bg-[#ff7c08] whitespace-nowrap overflow-hidden">
                                 {isOpen ? item : item[0]} 
                             </a>
+
                         </li>
                     ))}
                 </ul>
