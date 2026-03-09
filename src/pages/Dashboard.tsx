@@ -1,11 +1,19 @@
-
+import Sidebar from "../components/Sidebar";
+import HeaderPage from "../components/HeaderPage";
 
 export default function Dashboard() {
-    return (
-        <div className="flex items-center justify-center p-10 rounded shadow-md radius-lg">
-            <h1 className="text-3xl font-bold font-serif text-[#ff7c08] tracking-wide">
-   
-            </h1>
-        </div>
-    );
+  return (
+    <div className="flex min-h-screen">      
+      <Sidebar />
+      
+      <div className="flex flex-col flex-1">
+        <HeaderPage />
+        <main className="flex-1 p-10 bg-gray-50">                            
+          <h1 className="text-3xl font-bold font-serif text-[#ff7c08] tracking-wide">
+            Dashboard
+          </h1>
+        </main>
+      </div>
+    </div>
+  );
 }
