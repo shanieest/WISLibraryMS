@@ -1,15 +1,11 @@
 import { useState } from "react";
 import { FaBars, FaChevronDown } from "react-icons/fa";
-import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Sidebar() {
     const [isOpen, setIsOpen] = useState(true);
     const [booksOpen, setBooksOpen] = useState(false);
-    const navigate = useNavigate();
 
-    const handleNavigation = (path: string) => {
-        navigate("/books/details");
-    };
 
 
     return (
@@ -38,9 +34,9 @@ export default function Sidebar() {
 
                         {isOpen && booksOpen && (
                             <ul className="ml-4 mt-2 space-y-1 border-l border-white/20">
-                                <li><a href="/books/details" className="block py-1 px-4 hover:text-[#ff7c08]">Book Details</a></li>
-                                <li><a href="/books/borrowed" className="block py-1 px-4 hover:text-[#ff7c08]">Borrowed Books</a></li>
-                                <li><a href="/books/returned" className="block py-1 px-4 hover:text-[#ff7c08]">Returned Books</a></li>
+                                <Link to="/books/details" className="block py-1 px-4 hover:text-[#ff7c08]">Book Details</Link>
+                                <Link to="/books/borrowed" className="block py-1 px-4 hover:text-[#ff7c08]">Borrowed Books</Link>
+                                <Link to="/books/returned" className="block py-1 px-4 hover:text-[#ff7c08]">Returned Books</Link>
                             </ul>
                         )}
                     </li>
