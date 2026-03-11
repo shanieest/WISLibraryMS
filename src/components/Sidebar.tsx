@@ -49,7 +49,6 @@ export default function Sidebar() {
                         </NavLink>
                     </li>
 
-                    {/* Books Dropdown */}
                     <li>
                         <button 
                             onClick={toggleBooks}
@@ -64,7 +63,6 @@ export default function Sidebar() {
                             )}
                         </button>
 
-                        {/* Sub-menu (Only shows if open and expanded) */}
                         {isOpen && booksOpen && (
                             <ul className="ml-9 mt-1 space-y-1 border-l border-white/20 pl-4">
                                 <li>
