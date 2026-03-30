@@ -3,6 +3,7 @@ import HeaderPage from "../../components/HeaderPage";
 import Sidebar from "../../components/Sidebar";
 
 export default function BookDetails() {
+    const [open, setOpen] = useState(false);
     const [books] = useState([
         { 
             title: "The Great Gatsby", 
@@ -65,9 +66,72 @@ export default function BookDetails() {
                         <h1 className="text-2xl font-bold font-serif text-[#ff7c08] tracking-wide">
                             Book Details
                         </h1>
-                        <button className="bg-[#ff7c08] text-white py-2 px-6 rounded shadow-md hover:bg-[#e66b00] transition-all active:scale-95">
+                        <button onClick={() => setOpen(true)} className="bg-[#ff7c08] text-white py-2 px-6 rounded shadow-md hover:bg-[#e66b00] transition-all active:scale-95">
                             Add Book
                         </button>
+
+                        <div 
+                            className={`fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm transition-opacity p-4 ${open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`} 
+                            onClick={() => setOpen(false)}
+                        >
+                            <div 
+                                className="bg-white rounded-xl shadow-2xl max-w-md w-full relative flex flex-col max-h-[90vh]" 
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <button onClick={() => setOpen(false)} className="absolute top-4 right-4 text-gray-500 hover:text-black z-10">
+                                    ✕
+                                </button>
+
+                                <div className="p-8 pb-0">
+                                    <h2 className="text-xl font-semibold mb-4">Add New Book</h2>
+                                </div>
+
+                                <form className="space-y-4 overflow-y-auto p-8 pt-2 custom-scrollbar">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Title</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Author</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">ISBN</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Price</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Publisher</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Publication Year</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Physical Description</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Notes</label>
+                                        <textarea className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" rows={3}></textarea>
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700 mb-1">Subject Headings</label>
+                                        <input type="text" className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#ff7c08]" />
+                                    </div>
+                                    
+                                    <div className="pt-2">
+                                        <button type="submit" className="w-full bg-[#ff7c08] text-white py-2 px-4 rounded hover:bg-[#e66b00] transition-all active:scale-95">
+                                            Save
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="bg-white rounded-lg border border-gray-200 shadow-sm overflow-hidden">
