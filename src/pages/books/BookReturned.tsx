@@ -1,8 +1,8 @@
 import HeaderPage from "../../components/HeaderPage";
 import Sidebar from "../../components/Sidebar";
+import { returnedBooks } from "../../data/books";
 
-
-export default function BookReturned(){
+export default function BookReturned() {
     return(
         <div className="flex min-h-screen">      
             <Sidebar />
@@ -34,20 +34,14 @@ export default function BookReturned(){
                                         </tr>
                                     </thead>
                                     <tbody className="bg-white divide-y divide-gray-200">
-                                        <tr>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                The Great Gatsby
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                F. Scott Fitzgerald
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                978-0-7432-7356-5
-                                            </td>
-                                            <td className="px-6 py-4 whitespace-nowrap">
-                                                2023-10-15
-                                            </td>
-                                        </tr>
+                                        {returnedBooks.map((book) => (
+                                            <tr key={book.id} className="hover:bg-orange-50/30 transition-colors">
+                                                <td className="px-6 py-4 whitespace-nowrap">{book.title}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{book.author}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{book.isbn}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{book.returnDate}</td>
+                                            </tr>
+                                        ))}
                                     </tbody>
                                 </table>
                             </div>
