@@ -39,7 +39,7 @@ export default function BookReturned() {
                                                 <td className="px-6 py-4 whitespace-nowrap">{book.title}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap">{book.author}</td>
                                                 <td className="px-6 py-4 whitespace-nowrap">{book.isbn}</td>
-                                                <td className="px-6 py-4 whitespace-nowrap">{book.returnDate}</td>
+                                                <td className="px-6 py-4 whitespace-nowrap">{book.returnDate}</td>                                              
                                             </tr>
                                         ))}
                                     </tbody>

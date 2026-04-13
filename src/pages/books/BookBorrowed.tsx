@@ -1,8 +1,10 @@
+import { useState } from "react";
 import HeaderPage from "../../components/HeaderPage";
 import Sidebar from "../../components/Sidebar";
 import { borrowedBooks } from "../../data/books";
 
 export default function BookBorrowed() {
+    const [isOpen, setIsOpen] = useState(false);
 
     return(
         <div className="flex min-h-screen">      
@@ -15,7 +17,7 @@ export default function BookBorrowed() {
                         Borrowed Books
                     </h1>
                     <div className="mt-6">
-                        <button className="flex bg-[#ff7c08] text-white px-4 py-2 rounded-md hover:bg-[#e56b00] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button onClick={() => setIsOpen(true)} className="flex bg-[#ff7c08] text-white px-4 py-2 rounded-md hover:bg-[#e56b00] focus:outline-none focus:ring-2 focus:ring-blue-500">
                             Add New Borrowing
                         </button>
                     </div>
@@ -59,6 +61,36 @@ export default function BookBorrowed() {
                             </table>
                         </div>
                     </div>
+
+                    {isOpen && (
+                        <div className=" fixed inset-0 flex items-center justify-center bg-black bg-opacity-50" onClick={() => setIsOpen(false)}>
+                            <div className="bg-white p-6 rounded-lg shadow-lg" onClick={(e) => e.stopPropagation()}>
+                                <h2 className="text-xl font-bold mb-4">Add New Borrowing</h2>
+                                <form className="space-y-4">
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700">Book Title</label>
+                                        <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700">Borrower Name</label>
+                                        <input type="text" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700">Borrow Date</label>
+                                        <input type="date" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-sm font-medium text-gray-700">Due Date</label>
+                                        <input type="date" className="mt-1 block w-full border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500" />
+                                    </div>
+                                    <button type="submit" className="bg-[#ff7c08] text-white px-4 py-2 rounded-md hover:bg-[#e56b00] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                        Add Borrowing
+                                    </button>
+                                </form>
+                            </div>
+
+                        </div>
+                    )}
                 </main>        
             </div>
         </div>
