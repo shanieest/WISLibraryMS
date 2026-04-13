@@ -15,7 +15,7 @@ export default function BookBorrowed() {
                         Borrowed Books
                     </h1>
                     <div className="mt-6">
-                        <button className="flex right bg-[#ff7c08] text-white px-4 py-2 rounded-md hover:bg-[#e56b00] focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <button className="flex bg-[#ff7c08] text-white px-4 py-2 rounded-md hover:bg-[#e56b00] focus:outline-none focus:ring-2 focus:ring-blue-500">
                             Add New Borrowing
                         </button>
                     </div>
