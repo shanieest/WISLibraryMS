@@ -12,6 +12,10 @@ export default function Dashboard() {
           <h1 className="text-3xl font-bold font-serif text-[#ff7c08] tracking-wide">
             Dashboard
           </h1>
+
+          <div>
+            <p className="text-lg leading-relaxed text-gray-700 mt-4 font-serif"></p>
+          </div>
         </main>
       </div>
     </div>
